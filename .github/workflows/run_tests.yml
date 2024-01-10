@@ -29,3 +29,6 @@ jobs:
           run: echo "Download terminated"
         - name: Show files
           run: tree /f
+        - name:  Install Miniforge
+          run: | 
+           start /wait "" %BUILD_ARTIFACTSTAGINGDIRECTORY%\Miniforge.exe /InstallationType=JustMe /RegisterPython=0 /S /D=C:\Miniforge
