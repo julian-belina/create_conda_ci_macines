@@ -51,7 +51,7 @@ jobs:
             $filebase = Join-Path $PSScriptRoot $directoryname
             echo $filebase
         - name: miniforge
-          run: start /wait "" Miniforge3-Windows-x86_64.exe /InstallationType=JustMe /RegisterPython=0 /S /D=%UserProfile%\Miniforge3
+          run: start /wait "" Miniforge.exe /InstallationType=JustMe /RegisterPython=0 /S /D=%UserProfile%\Miniforge3
         # - name: miniforge
         #   run: |
         #    $directoryname = "MambaforgeDir"
