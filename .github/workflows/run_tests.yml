@@ -42,7 +42,7 @@ jobs:
         # - name: install miniforge
         #   run: winget install -e --id CondaForge.Miniforge3 --accept-source-agreements --accept-package-agreements
         - name: miniforge
-          run: start /wait "" Miniforge.exe /InstallationType=JustMe /RegisterPython=0 /S /D=%UserProfile%\Miniforge3
+          run: start /wait "" Miniforge.exe /InstallationType=JustMe /RegisterPython=1 /RegisterMiniforge=1 /S /D=%UserProfile%\Miniforge3
         
         - name: Conda
           run: conda -V
