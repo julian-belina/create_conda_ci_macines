@@ -43,8 +43,12 @@ jobs:
         #   run: winget install -e --id CondaForge.Miniforge3 --accept-source-agreements --accept-package-agreements
         - name: miniforge
           run: start /wait "" Miniforge.exe /InstallationType=JustMe /RegisterPython=1 /RegisterMiniforge=1 /S /D=%UserProfile%\Miniforge3
-        
+        - name: Show files
+          run: tree /f
         - name: Conda
-          run: conda -V
-        - name: Mamba
-          run: mamba -V
+          run: | 
+            [Environment]::SetEnvironmentVariable("PATH", "C:\Miniforge\script", "User") 
+            conda -V
+            mamba -V
+        # - name: Mamba
+        #   run: mamba -V
