@@ -43,8 +43,19 @@ jobs:
         #   run: winget install -e --id CondaForge.Miniforge3 --accept-source-agreements --accept-package-agreements
         - name: working directory
           run: Get-Location
+        - name: working directory 2
+          run: echo $PSScriptRoot
+        - name: working directory 3
+          run: |
+            $directoryname = "MambaforgeDir"
+            $filebase = Join-Path $PSScriptRoot $directoryname
+            echo $filebase
+          
         - name: miniforge
-          run: start /wait "" Miniforge.exe /InstallationType=JustMe /RegisterPython=1 /AddToPath=1 /S
+          run: |
+           $directoryname = "MambaforgeDir"
+           $filebase = Join-Path $PSScriptRoot $directoryname
+           start /wait "" Miniforge.exe /InstallationType=JustMe /RegisterPython=1 /AddToPath=1 /S /D=$filebase
         - name: Show files
           run: tree /f
         
