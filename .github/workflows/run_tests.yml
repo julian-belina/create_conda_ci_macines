@@ -42,9 +42,11 @@ jobs:
         # - name: install miniforge
         #   run: winget install -e --id CondaForge.Miniforge3 --accept-source-agreements --accept-package-agreements
         - name: miniforge
-          run: start /wait "" Miniforge.exe /InstallationType=JustMe /RegisterPython=1 /AddToPath=1 /S /D=$PSScriptRoot$\Miniforge3
+          run: start /wait "" Miniforge.exe /InstallationType=JustMe /RegisterPython=1 /AddToPath=1 /S
         - name: Show files
           run: tree /f
+        - name: working directory
+          run: Get-Location
         - name: Conda
           run: | 
             set path=%path%;"$PSScriptRoot$\Miniforge\script" 
