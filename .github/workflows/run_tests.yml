@@ -1,0 +1,33 @@
+# Name of the workflow
+name: Run ETHOS.PeNALPS Tests
+# Events that trigger the workflow
+on:
+  push:
+    branches: main
+  pull_request:
+    branches: main
+  # Allows to trigger the workflow manually
+  workflow_dispatch:
+    branches: main
+
+jobs:
+  # defines a job id 
+  run_test_on_micromamba:
+      # Defines a name for the job id
+      name: Run windows test image
+      runs-on: windows-2022
+      defaults:
+        # Define the shell to be used in the job
+        run:
+          shell: cmd
+      steps:
+        - name: Check out the repository to the runner
+          uses: actions/checkout@v4  
+        - name: download miniforge
+          run: |
+            import urllib.request
+            url = 'https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-Windows-x86_64.exe'
+            path = r"$(Build.ArtifactStagingDirectory)/Miniforge.exe"
+            urllib.request.urlretrieve(url, path)
+        - name: Echo that workflow terminated
+          run: echo "Download terminated"
