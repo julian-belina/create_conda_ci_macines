@@ -34,6 +34,11 @@ jobs:
         # - name:  Install Miniforge
         #   run: | 
         #    start /wait "" %BUILD_ARTIFACTSTAGINGDIRECTORY%\Miniforge.exe /InstallationType=JustMe /RegisterPython=0 /S /D=C:\Miniforge
+        # Checkout the repository
+
+        - name: Install winget
+          uses: Cyberboss/install-winget@v1
+        - run: echo '${{ steps.stepid.outputs.winget-version }}'
         - name: install miniforge
           run: winget install -e --id CondaForge.Miniforge3
         - name: Conda
