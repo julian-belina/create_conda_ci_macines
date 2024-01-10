@@ -40,7 +40,7 @@ jobs:
           uses: Cyberboss/install-winget@v1
         - run: echo '${{ steps.stepid.outputs.winget-version }}'
         - name: install miniforge
-          run: winget install -e --id CondaForge.Miniforge3
+          run: winget install -e --id CondaForge.Miniforge3 --accept-source-agreements --accept-package-agreements
         - name: Conda
           run: conda -V
         - name: Mamba
