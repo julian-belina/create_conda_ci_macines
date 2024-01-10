@@ -21,14 +21,22 @@ jobs:
         run:
           shell: cmd
       steps:
+        # Checkout the repository
         - name: Check out the repository to the runner
-          uses: actions/checkout@v4  
-        - name: download miniforge
-          run: curl.exe --output Miniforge.exe --url https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-Windows-x86_64.exe -L
-        - name: Echo that workflow terminated
-          run: echo "Download terminated"
-        - name: Show files
-          run: tree /f
-        - name:  Install Miniforge
-          run: | 
-           start /wait "" %BUILD_ARTIFACTSTAGINGDIRECTORY%\Miniforge.exe /InstallationType=JustMe /RegisterPython=0 /S /D=C:\Miniforge
+          uses: actions/checkout@v4
+        # # download miniforge
+        # - name: download miniforge
+        #   run: curl.exe --output Miniforge.exe --url https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-Windows-x86_64.exe -L
+        # - name: Echo that workflow terminated
+        #   run: echo "Download terminated"
+        # - name: Show files
+        #   run: tree /f
+        # - name:  Install Miniforge
+        #   run: | 
+        #    start /wait "" %BUILD_ARTIFACTSTAGINGDIRECTORY%\Miniforge.exe /InstallationType=JustMe /RegisterPython=0 /S /D=C:\Miniforge
+        - name: install miniforge
+          run: winget install -e --id CondaForge.Miniforge3
+        - name: Conda
+          run: conda -V
+        - name: Mamba
+          run: mamba -V
