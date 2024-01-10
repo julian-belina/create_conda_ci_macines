@@ -47,7 +47,7 @@ jobs:
           run: tree /f
         - name: Conda
           run: | 
-            [Environment]::SetEnvironmentVariable("PATH", "C:\Miniforge\script", "User") 
+            [Environment]::SetEnvironmentVariable("PATH", "C:%UserProfile%\Miniforge\script", "User") 
             conda -V
             mamba -V
         # - name: Mamba
