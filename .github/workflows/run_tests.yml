@@ -41,15 +41,15 @@ jobs:
         # - run: echo '${{ steps.stepid.outputs.winget-version }}'
         # - name: install miniforge
         #   run: winget install -e --id CondaForge.Miniforge3 --accept-source-agreements --accept-package-agreements
-        - name: working directory
-          run: Get-Location
-        - name: working directory 2
-          run: echo $PSScriptRoot
-        - name: working directory 3
-          run: |
-            $directoryname = "MambaforgeDir"
-            $filebase = Join-Path $PSScriptRoot $directoryname
-            echo $filebase
+        # - name: working directory
+        #   run: Get-Location
+        # - name: working directory 2
+        #   run: echo $PSScriptRoot
+        # - name: working directory 3
+        #   run: |
+        #     $directoryname = "MambaforgeDir"
+        #     $filebase = Join-Path $PSScriptRoot $directoryname
+        #     echo $filebase
         - name: miniforge
           run: setup_conda.bat
         # - name: miniforge
