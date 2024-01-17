@@ -31,7 +31,7 @@ jobs:
            echo $minidir
            mkdir $minidir
            echo "Done"
-           $path=$minidir"\condabin"
+           $path="$minidir\condabin"
            echo $path
            cd $path
            .\conda -V
