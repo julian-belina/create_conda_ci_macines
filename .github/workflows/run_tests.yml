@@ -60,10 +60,10 @@ jobs:
         - name: Show files
           run: tree /f
         
-        - name: Conda
-          run: | 
-            set path=%path%;"$PSScriptRoot$\Miniforge\script" 
-            conda -V
-            mamba -V
-        # - name: Mamba
-        #   run: mamba -V
+        # - name: Conda
+        #   run: | 
+        #     set path=%path%;"$PSScriptRoot$\Miniforge\script" 
+        #     conda -V
+        #     mamba -V
+        # # - name: Mamba
+        # #   run: mamba -V
