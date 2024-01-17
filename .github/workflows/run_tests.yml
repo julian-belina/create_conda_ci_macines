@@ -30,6 +30,7 @@ jobs:
            $minidir="$PWD\Miniconda3"
            echo $minidir
            mkdir $minidir
+           Start-Process Miniforge.exe -Wait -ArgumentList @('/NoRegistry=1', '/D="$minidir"')
            echo "Done"
            tree /F
            echo "show files terminated"
@@ -38,7 +39,7 @@ jobs:
            cd $path
            .\conda -V
            .\mamba -V
-          #  Start-Process Miniforge.exe -Wait -ArgumentList @('/NoRegistry=1', '/D="$minidir"')
+          
           #  where python
           #  echo "path to powershell script is"
           #  conda init powershell
