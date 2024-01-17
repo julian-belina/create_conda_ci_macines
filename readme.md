@@ -14,3 +14,5 @@ https://learn.microsoft.com/de-de/windows-server/administration/windows-commands
 # Miniforge
 
 https://github.com/conda-forge/miniforge#mambaforge
+
+https://docs.anaconda.com/free/anaconda/install/silent-mode/
