@@ -32,7 +32,7 @@ jobs:
            mkdir $minidir
            Start-Process Miniconda3-py39_4.9.2-Windows-x86_64.exe -Wait -ArgumentList @('/S', '/InstallationType=JustMe', '/RegisterPython=1', '/D="$minidir"')
            echo "path to powershell script is"
-           Join-Path $minidir -ChildPath "condabin" | Join-Path -ChildPath "shell" | Join-Path -ChildPath "conda-hook.ps1"
+           Join-Path $minidir -ChildPath "shell" | Join-Path -ChildPath "condabin" | Join-Path -ChildPath "conda-hook.ps1"
            echo $path
            $path
            echo "Powershell is activated"
