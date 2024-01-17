@@ -19,7 +19,7 @@ jobs:
       defaults:
         # Define the shell to be used in the job
         run:
-          shell: cmd
+          shell: powershell
       steps:
         # Checkout the repository
         - name: Check out the repository to the runner
