@@ -25,8 +25,8 @@ jobs:
         - name: Check out the repository to the runner
           uses: actions/checkout@v4
         # download miniforge
-        - name: download miniforge
-          run: curl.exe --output Miniforge.exe --url https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-Windows-x86_64.exe -L
+        # - name: download miniforge
+        #   run: curl.exe --output Miniforge.exe --url https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-Windows-x86_64.exe -L
         # - name: Echo that workflow terminated
         #   run: echo "Download terminated"
         # - name: Show files
@@ -50,16 +50,13 @@ jobs:
         #     $directoryname = "MambaforgeDir"
         #     $filebase = Join-Path $PSScriptRoot $directoryname
         #     echo $filebase
-        # - name: miniforge
-        #   run: setup_conda.bat
         - name: miniforge
-          run: |
-           $directoryname = "MambaforgeDir"
-           $filebase = Join-Path $PSScriptRoot $directoryname
-           start /wait "" Miniforge.exe /InstallationType=JustMe /S /RegisterPython=1 /AddToPath=1 /S /D=$PWD\miniforge
-           conda init
-           conda -V
-           mamba -V
+          run: setup_conda.bat
+        # - name: miniforge
+        #   run: |
+        #    $directoryname = "MambaforgeDir"
+        #    $filebase = Join-Path $PSScriptRoot $directoryname
+        #    start /wait "" Miniforge.exe /InstallationType=JustMe /RegisterPython=1 /AddToPath=1 /S /D=$filebase
         - name: Show files
           run: tree /f
         
