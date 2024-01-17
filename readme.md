@@ -10,3 +10,7 @@ https://superuser.com/questions/284342/what-are-path-and-other-environment-varia
 
 # Start options
 https://learn.microsoft.com/de-de/windows-server/administration/windows-commands/start
+
+# Miniforge
+
+https://github.com/conda-forge/miniforge#mambaforge
