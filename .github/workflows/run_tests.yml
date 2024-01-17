@@ -50,13 +50,16 @@ jobs:
         #     $directoryname = "MambaforgeDir"
         #     $filebase = Join-Path $PSScriptRoot $directoryname
         #     echo $filebase
-        - name: miniforge
-          run: setup_conda.bat
         # - name: miniforge
-        #   run: |
-        #    $directoryname = "MambaforgeDir"
-        #    $filebase = Join-Path $PSScriptRoot $directoryname
-        #    start /wait "" Miniforge.exe /InstallationType=JustMe /RegisterPython=1 /AddToPath=1 /S /D=$filebase
+        #   run: setup_conda.bat
+        - name: miniforge
+          run: |
+           $directoryname = "MambaforgeDir"
+           $filebase = Join-Path $PSScriptRoot $directoryname
+           start /wait "" Miniforge.exe /InstallationType=JustMe /S /RegisterPython=1 /AddToPath=1 /S /D=$PWD\miniforge
+           conda init
+           conda -V
+           mamba -V
         - name: Show files
           run: tree /f
         
