@@ -32,9 +32,10 @@ jobs:
            mkdir $minidir
            Start-Process Miniconda3-py39_4.9.2-Windows-x86_64.exe -Wait -ArgumentList @('/S', '/InstallationType=JustMe', '/RegisterPython=1', '/D="$minidir"')
            echo "path to powershell script is"
-           echo [IO.Path]::Combine('$minidir', 'condabin', 'shell', "conda-hook.ps1")
+           $path = Join-Path C: "minidir" "condabin" "shell" "conda-hook.ps1"
           #  echo $minidir\condabin\shell\conda-hook.ps1
-           [IO.Path]::Combine('$minidir', 'condabin', 'shell', "conda-hook.ps1")
+           echo $path
+           $path
            conda -V
            mamba -V
         # - name: miniforge
