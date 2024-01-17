@@ -31,6 +31,9 @@ jobs:
            echo $minidir
            mkdir $minidir
            echo "Done"
+           $path=Join-Path $minidir | Join-Path -ChildPath "condabin"
+           echo $path
+           cd $path
            conda -V
            mamba -V
           #  Start-Process Miniforge.exe -Wait -ArgumentList @('/NoRegistry=1', '/D="$minidir"')
