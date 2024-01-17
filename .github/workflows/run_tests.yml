@@ -38,7 +38,7 @@ jobs:
             }
         - name: Setup Miniforge
           run: |
-           curl.exe --output Miniforge.exe --url https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-Windows-x86_64.exe
+           curl.exe --output Miniforge.exe --url https://github.com/conda-forge/miniforge/releases/download/23.1.0-2/Mambaforge-23.1.0-2-Windows-x86_64.exe
            $minidir="$PWD\Miniconda3"
            echo $minidir
            mkdir $minidir
