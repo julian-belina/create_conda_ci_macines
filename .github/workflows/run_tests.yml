@@ -31,6 +31,8 @@ jobs:
            echo $minidir
            mkdir $minidir
            echo "Done"
+           tree /F
+           echo "show files terminated"
            $path="$minidir\condabin"
            echo $path
            cd $path
