@@ -25,8 +25,8 @@ jobs:
         - name: Check out the repository to the runner
           uses: actions/checkout@v4
         # download miniforge
-        # - name: download miniforge
-        #   run: curl.exe --output Miniforge.exe --url https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-Windows-x86_64.exe -L
+        - name: download miniforge
+          run: curl.exe --output Miniforge.exe --url https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-Windows-x86_64.exe -L
         # - name: Echo that workflow terminated
         #   run: echo "Download terminated"
         # - name: Show files
