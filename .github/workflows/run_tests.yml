@@ -31,7 +31,7 @@ jobs:
            echo $minidir
            mkdir $minidir
            Start-Process Miniconda3-py39_4.9.2-Windows-x86_64.exe -Wait -ArgumentList @('/S', '/InstallationType=JustMe', '/RegisterPython=1', '/D="$minidir"')
-           conda init
+           $minidir\condabin\conda init
            conda -V
            mamba -V
         # - name: miniforge
