@@ -35,6 +35,7 @@ jobs:
            Join-Path $minidir -ChildPath "condabin" | Join-Path -ChildPath "shell" | Join-Path -ChildPath "conda-hook.ps1"
            echo $path
            $path
+           echo "Powershell is activated"
            conda -V
            mamba -V
         # - name: miniforge
