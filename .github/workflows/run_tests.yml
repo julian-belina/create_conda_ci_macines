@@ -30,11 +30,12 @@ jobs:
            $minidir="$PWD\Miniconda3"
            echo $minidir
            mkdir $minidir
-           Start-Process Miniforge.exe -Wait -ArgumentList @('/S', '/InstallationType=JustMe', '/RegisterPython=1','/AddToPath=1', '/D="$minidir"')
+           Start-Process Miniforge.exe -Wait -ArgumentList @('/NoRegistry=1', '/D="$minidir"')
            where python
            echo "path to powershell script is"
            conda init powershell
           #  Join-Path $minidir -ChildPath "shell" | Join-Path -ChildPath "condabin" | Join-Path -ChildPath "conda-hook.ps1"
+          # Start-Process Miniforge.exe -Wait -ArgumentList @('/S', '/InstallationType=JustMe', '/RegisterPython=1','/AddToPath=1', '/D="$minidir"')
           #  echo $path
           #  $path
           #  echo "Powershell is activated"
