@@ -24,6 +24,18 @@ jobs:
         # Checkout the repository
         - name: Check out the repository to the runner
           uses: actions/checkout@v4
+        - name: Check Os
+          run: |
+            if ((Get-WmiObject win32_operatingsystem | select osarchitecture).osarchitecture -eq "64-bit")
+            {
+                #64 bit logic here
+                echo "64-bit OS"
+            }
+            else
+            {
+                #32 bit logic here
+                echo "32-bit OS"
+            }
         - name: Setup Miniforge
           run: |
            curl.exe --output Miniforge.exe --url https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-Windows-x86_64.exe
