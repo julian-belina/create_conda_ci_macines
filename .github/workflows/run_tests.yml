@@ -26,11 +26,11 @@ jobs:
           uses: actions/checkout@v4
         - name: Setup Miniforge
           run: |
-           curl.exe --output Miniconda3-py39_4.9.2-Windows-x86_64.exe --url https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-Windows-x86_64.exe
+           curl.exe --output Miniforge.exe --url https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-Windows-x86_64.exe
            $minidir="$PWD\Miniconda3"
            echo $minidir
            mkdir $minidir
-           Start-Process Miniconda3-py39_4.9.2-Windows-x86_64.exe -Wait -ArgumentList @('/S', '/InstallationType=JustMe', '/RegisterPython=1','/AddToPath=1', '/D="$minidir"')
+           Start-Process Miniforge.exe -Wait -ArgumentList @('/S', '/InstallationType=JustMe', '/RegisterPython=1','/AddToPath=1', '/D="$minidir"')
            where python
            echo "path to powershell script is"
            conda init powershell
