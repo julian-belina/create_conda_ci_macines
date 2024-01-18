@@ -20,3 +20,5 @@ https://docs.anaconda.com/free/anaconda/install/silent-mode/
 # Powershell setup
 
 https://stackoverflow.com/questions/65665834/how-do-you-do-a-proper-silent-installation-miniconda3-with-windows-powershell-on
+
+https://github.com/conda-incubator/setup-miniconda
