@@ -8,12 +8,14 @@ on:
     branches: main
   schedule:
     # * is a special character in YAML so you have to quote this string
-    # Some Examples for cron syntax
+    # Some Examples for cron syntax https://crontab.guru/examples.html
     # Schedules job at any point after 12 pm
-    - cron:  '0 0 * * *'
+    # - cron:  '0 0 * * *'
+    # Weekly after sunday
+    - cron: 0 0 * * 0
 
 jobs:
-  example-1:
+  TestGeokitSingle:
     name: Ex1 (${{ matrix.python-version }}, ${{ matrix.os }})
     runs-on: ${{ matrix.os }}
     strategy:
@@ -24,8 +26,8 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
         with:
-          repository: FZJ-IEK3-VSA/FINE
-          path: './fine'      
+          repository: FZJ-IEK3-VSA/geokit
+          path: './geokit'      
       - uses: conda-incubator/setup-miniconda@v3
         with:
           miniforge-version: latest
@@ -36,7 +38,7 @@ jobs:
         run: |
           ls
           echo "LS Done"
-          mamba install fine pytest
+          mamba install geokit pytest
           echo "Installation done"
           conda list
           echo "libaries printed"
