@@ -1,0 +1,24 @@
+on:
+  push:
+    branches: main
+  pull_request:
+    branches: main
+  # Allows to trigger the workflow manually
+  workflow_dispatch:
+    branches: main
+
+jobs:
+  example-10-miniforge:
+    name: Ex10 (${{ matrix.os }}, Miniforge)
+    runs-on: ${{ matrix.os }}-latest
+    strategy:
+      matrix:
+        os: ["ubuntu", "macos", "windows"]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: conda-incubator/setup-miniconda@v3
+        with:
+          environment-file: etc/example-environment.yml
+          miniforge-version: latest
+      - name: test_step
+        run: cecho This is done

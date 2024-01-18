@@ -1,5 +1,5 @@
 # Name of the workflow
-name: Run ETHOS.PeNALPS Tests
+name: Run ethos suite tests
 # Events that trigger the workflow
 on:
   push:
