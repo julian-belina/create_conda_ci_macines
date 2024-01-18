@@ -1,0 +1,82 @@
+# # Name of the workflow
+# name: Run ethos suite tests
+# # Events that trigger the workflow
+# on:
+#   push:
+#     branches: main
+#   pull_request:
+#     branches: main
+#   # Allows to trigger the workflow manually
+#   workflow_dispatch:
+#     branches: main
+
+# jobs:
+#   # defines a job id 
+#   run_test_on_micromamba:
+#       # Defines a name for the job id
+#       name: Run windows test image
+#       runs-on: windows-2022
+#       defaults:
+#         # Define the shell to be used in the job
+#         run:
+#           shell: powershell
+#       steps:
+#         # Checkout the repository
+#         - name: Check out the repository to the runner
+#           uses: actions/checkout@v4
+#         - name: Check Os
+#           run: |
+#             if ((Get-WmiObject win32_operatingsystem | select osarchitecture).osarchitecture -eq "64-bit")
+#             {
+#                 #64 bit logic here
+#                 echo "64-bit OS"
+#             }
+#             else
+#             {
+#                 #32 bit logic here
+#                 echo "32-bit OS"
+#             }
+#         - name: Setup Miniforge
+#           run: |
+#            curl.exe --output Miniforge.exe --url https://github.com/conda-forge/miniforge/releases/download/23.1.0-2/Mambaforge-23.1.0-2-Windows-x86_64.exe
+#            $minidir="$PWD\Miniconda3"
+#            echo $minidir
+#            mkdir $minidir
+#            Start-Process Miniforge.exe -Wait -ArgumentList @('/NoRegistry=1', '/D="$minidir"')
+#            echo "Done"
+#            tree /F
+
+#            echo "show files terminated"
+#            $path="$minidir\condabin"
+#            echo $path
+#            cd $path
+#            .\conda -V
+#            .\mamba -V
+          
+#           #  where python
+#           #  echo "path to powershell script is"
+#           #  conda init powershell
+#           #  Join-Path $minidir -ChildPath "shell" | Join-Path -ChildPath "condabin" | Join-Path -ChildPath "conda-hook.ps1"
+#           # Start-Process Miniforge.exe -Wait -ArgumentList @('/S', '/InstallationType=JustMe', '/RegisterPython=1','/AddToPath=1', '/D="$minidir"')
+#           #  echo $path
+#           #  $path
+#           #  echo "Powershell is activated"
+#           #  conda -V
+#           #  mamba -V
+#         # - name: miniforge
+#         #   run: setup_conda.bat
+#         # - name: miniforge
+#         #   run: |
+#         #    $directoryname = "MambaforgeDir"
+#         #    $filebase = Join-Path $PSScriptRoot $directoryname
+#         #    start /wait "" Miniforge.exe /InstallationType=JustMe /RegisterPython=1 /AddToPath=1 /S /D=$filebase
+#         - name: Show files
+#           run: tree /f
+        
+#         # - name: Conda
+#         #   run: | 
+#         #     set path=%path%;"$PSScriptRoot$\Miniforge\script" 
+#         #     conda -V
+#         #     mamba -V
+#         # # - name: Mamba
+#         # #   run: mamba -V

@@ -26,8 +26,13 @@ jobs:
       - name: Conda list
         shell: pwsh
         run: conda list
+      - name: Mamba V
+        shell: pwsh
+        run: mamba -V
       - name: conda install fine
-        run: conda install fine pytest
+        shell: pwsh
+        run: mamba install fine pytest
       - name: run tests
+        shell: pwsh
         run: pytest
         
