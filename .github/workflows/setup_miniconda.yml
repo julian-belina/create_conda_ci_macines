@@ -6,6 +6,11 @@ on:
   # Allows to trigger the workflow manually
   workflow_dispatch:
     branches: main
+  schedule:
+    # * is a special character in YAML so you have to quote this string
+    # Some Examples for cron syntax
+    # Schedules job at any point after 12 pm
+    - cron:  '0 0 * * *'
 
 jobs:
   example-1:
@@ -20,19 +25,10 @@ jobs:
         with:
           miniforge-version: latest
           channels: conda-forge
-      - name: Conda info
-        shell: bash -el {0}
-        run: conda info
-      - name: Conda list
+          activate-environment: test_env
+      - name: Run Fine test
         shell: pwsh
-        run: conda list
-      - name: Mamba V
-        shell: pwsh
-        run: mamba -V
-      - name: conda install fine
-        shell: pwsh
-        run: mamba install fine pytest
-      - name: run tests
-        shell: pwsh
-        run: pytest
+        run: |
+          mamba install fine pytest
+          pytest
         
