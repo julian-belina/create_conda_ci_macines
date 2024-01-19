@@ -1,14 +1,14 @@
 # Github Job status
 
 ![example workflow](https://github.com/julian-belina/create_conda_ci_macines/actions/workflows/test_combined.yml/badge.svg)
-![example workflow](https://github.com/julian-belina/create_conda_ci_macines/actions/workflows/test_fine/badge.yml.svg)
-![example workflow](https://github.com/julian-belina/create_conda_ci_macines/actions/workflows/test_glaes/badge.yml.svg)
-![example workflow](https://github.com/julian-belina/create_conda_ci_macines/actions/workflows/test_geokit/badge.yml.svg)
-![example workflow](https://github.com/julian-belina/create_conda_ci_macines/actions/workflows/test_penalps/badge.yml.svg)
-![example workflow](https://github.com/julian-belina/create_conda_ci_macines/actions/workflows/test_reskit/badge.yml.svg)
+![example workflow](https://github.com/julian-belina/create_conda_ci_macines/actions/workflows/test_fine.yml/badge.svg)
+![example workflow](https://github.com/julian-belina/create_conda_ci_macines/actions/workflows/test_glaes.yml/badge.svg)
+![example workflow](https://github.com/julian-belina/create_conda_ci_macines/actions/workflows/test_geokit.yml/badge.svg)
+![example workflow](https://github.com/julian-belina/create_conda_ci_macines/actions/workflows/test_penalps.yml/badge.svg)
+![example workflow](https://github.com/julian-belina/create_conda_ci_macines/actions/workflows/test_reskit.yml/badge.svg)
 
 
-# Github actions commands
+<!-- # Github actions commands
 
 https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#defaults
 
@@ -31,4 +31,4 @@ https://docs.anaconda.com/free/anaconda/install/silent-mode/
 
 https://stackoverflow.com/questions/65665834/how-do-you-do-a-proper-silent-installation-miniconda3-with-windows-powershell-on
 
-https://github.com/conda-incubator/setup-miniconda
+https://github.com/conda-incubator/setup-miniconda -->
