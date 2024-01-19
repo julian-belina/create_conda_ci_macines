@@ -1,11 +1,13 @@
 # Github Job status
 
-https://github.com/julian-belina/create_conda_ci_macines/blob/main/.github/workflows/test_combined/badge.svg
-https://github.com/julian-belina/create_conda_ci_macines/blob/main/.github/workflows/test_fine/badge.svg
-https://github.com/julian-belina/create_conda_ci_macines/blob/main/.github/workflows/test_glaes/badge.svg
-https://github.com/julian-belina/create_conda_ci_macines/blob/main/.github/workflows/test_geokit/badge.svg
-https://github.com/julian-belina/create_conda_ci_macines/blob/main/.github/workflows/test_penalps/badge.svg
-https://github.com/julian-belina/create_conda_ci_macines/blob/main/.github/workflows/test_reskit/badge.svg
+![example workflow](https://github.com/julian-belina/create_conda_ci_macines/actions/workflows/test_combined.yml/badge.svg)
+![example workflow](https://github.com/julian-belina/create_conda_ci_macines/actions/workflows/test_fine/badge.yml.svg)
+![example workflow](https://github.com/julian-belina/create_conda_ci_macines/actions/workflows/test_glaes/badge.yml.svg)
+![example workflow](https://github.com/julian-belina/create_conda_ci_macines/actions/workflows/test_geokit/badge.yml.svg)
+![example workflow](https://github.com/julian-belina/create_conda_ci_macines/actions/workflows/test_penalps/badge.yml.svg)
+![example workflow](https://github.com/julian-belina/create_conda_ci_macines/actions/workflows/test_reskit/badge.yml.svg)
+
+
 # Github actions commands
 
 https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#defaults
