@@ -1,3 +1,11 @@
+# Github Job status
+
+https://github.com/julian-belina/create_conda_ci_macines/blob/main/.github/workflows/test_combined/badge.svg
+https://github.com/julian-belina/create_conda_ci_macines/blob/main/.github/workflows/test_fine/badge.svg
+https://github.com/julian-belina/create_conda_ci_macines/blob/main/.github/workflows/test_glaes/badge.svg
+https://github.com/julian-belina/create_conda_ci_macines/blob/main/.github/workflows/test_geokit/badge.svg
+https://github.com/julian-belina/create_conda_ci_macines/blob/main/.github/workflows/test_penalps/badge.svg
+https://github.com/julian-belina/create_conda_ci_macines/blob/main/.github/workflows/test_reskit/badge.svg
 # Github actions commands
 
 https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#defaults
