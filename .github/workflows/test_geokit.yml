@@ -38,7 +38,7 @@ jobs:
         run: |
           ls
           echo "LS Done"
-          mamba install -n test_env geokit pytest
+          mamba install -n test_env geokit pytest gdal=3.4.3
           echo "Installation done"
           conda list
           echo "libaries printed"
