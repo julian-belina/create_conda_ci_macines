@@ -36,13 +36,13 @@ jobs:
       - name: Run tests
         shell: pwsh
         run: |
-        ls
-        echo "LS Done"
-        mamba install -n test_env glaes pytest
-        echo "Installation done"
-        conda list
-        echo "libaries printed"
-        echo "start pytest"
-        conda run -n test_env pytest
-        echo "Pytest done"
+          ls
+          echo "LS Done"
+          mamba install -n test_env glaes pytest gdal=3.4.2
+          echo "Installation done"
+          conda list
+          echo "libaries printed"
+          echo "start pytest"
+          conda run -n test_env pytest
+          echo "Pytest done"
         

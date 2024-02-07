@@ -38,7 +38,7 @@ jobs:
         run: |
           ls
           echo "LS Done"
-          mamba install -n test_env reskit pytest
+          mamba install -n test_env reskit pytest gdal=3.4.2
           echo "Installation done"
           conda list
           echo "libaries printed"
